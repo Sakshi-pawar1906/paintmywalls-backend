@@ -149,7 +149,7 @@ def apply_color():
             return jsonify({'error': 'Invalid image'}), 400
 
         h, w = img.shape[:2]
-        max_dim = 1000
+        max_dim = 600
         if max(h, w) > max_dim:
             scale = max_dim / max(h, w)
             img   = cv2.resize(img, (int(w * scale), int(h * scale)))
